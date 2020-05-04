@@ -1,0 +1,32 @@
+{
+  "name": "first-mearn-app",
+  "version": "1.0.0",
+  "description": "First ReactJS application with GraphQl, NodeJS(ExpressJS), MongoDB  ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch '**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc -p ./"
+  },
+  "keywords": [
+    "Mearn"
+  ],
+  "author": "Oleksii Gagren",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.12.0",
+    "express": "^4.17.1",
+    "graphql": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.6",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  }
+}
