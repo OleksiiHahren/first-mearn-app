@@ -6,5 +6,13 @@
     "outDir": "./build",
     "esModuleInterop": true,
     "strict": true
-  }
+  },
+  "include": ["source"],
+  "exclude": [
+    "../.idea",
+    "build",
+    "node_modules",
+    "typings/globals",
+    "typings/modules"
+  ]
 }
