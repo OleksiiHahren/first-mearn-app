@@ -1,11 +1,9 @@
-import express, {Application} from "express";
-
-const app = express();
+require('dotenv').config()
+const app = require('express');
+import {Application}  from "express";
 import {ApolloServer} from "apollo-server-express";
 import {typeDefs, resolvers} from "./graphQl";
 import {connectDatabase} from "./database";
-
-const port = 8000;
 
 
 const mount = async (app: Application) => {
@@ -15,10 +13,11 @@ const mount = async (app: Application) => {
         context: () => ({db})
     });
     server.applyMiddleware({app, path: '/api'})
-    app.listen(port);
+    console.log('here!')
+    app.listen(process.env.PORT);
     const listings = await db.listings.find({}).toArray();
     console.log(listings);
 
 }
 
-mount(express());
+mount(app());

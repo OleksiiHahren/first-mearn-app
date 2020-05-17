@@ -12,4 +12,5 @@
 *.launch
 .settings/
 *.sublime-workspace
-
+// environment variables
+.env
